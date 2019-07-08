@@ -388,6 +388,22 @@ Return Values
 
 * Result (string) - Returns a string with any errors related to this command.
 
+### SetBlinking
+
+**Available for Misty II Only**
+
+Turns eye blinking on or off.
+
+When blinking is turned on, Misty changes her display image to show the blink image on screen at a random interval.
+
+**Note:**
+
+Endpoint: POSt &lt;robot-ip-address&gt;/api/blink
+
+Parameters
+
+* blink (bool) - Passing a value of `true` turns blinking on, and passing `false` turns blinking off. By default, blinking is turned on at startup.
+
 ### SetFlashlight
 
 **Available for Misty II Only**
@@ -527,7 +543,7 @@ Endpoint: POST &lt;robot-ip-address&gt;/api/drive/time
 Parameters
 - LinearVelocity (double) - A percent value that sets the speed for Misty when she drives in a straight line. Default value range is from -100 (full speed backward) to 100 (full speed forward).
 - AngularVelocity (double) - A percent value that sets the speed and direction of Misty's rotation. Default value range is from -100 (full speed rotation clockwise) to 100 (full speed rotation counter-clockwise). **Note:** For best results when using angular velocity, we encourage you to experiment with using small positive and negative values to observe the effect on Misty's movement.
-- TimeMs (integer) - A value in milliseconds that specifies the duration of movement. Value range: 0 to 1000 ms, able to increment by 500 ms.
+- TimeMs (integer) - A value in milliseconds that specifies the duration of movement. Misty will not move if you pass in a value of less than 100.
 - Degree (double) - (optional) The number of degrees to turn. **Note:** Supplying a `Degree` value recalculates linear velocity.
 
 ```json
