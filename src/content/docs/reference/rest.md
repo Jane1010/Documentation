@@ -392,17 +392,27 @@ Return Values
 
 **Available for Misty II Only**
 
-Turns eye blinking on or off.
+Turns Misty's eye blinking behavior on or off. Misty blinks by quickly flashing the `Blink.png` image on her display.
 
-When blinking is turned on, Misty changes her display image to show the blink image on screen at a random interval.
+When blinking is turned on, Misty checks the filename of the image currently shown on her display. If this filename matches the filename of one of Misty's default open-eyed image assets, then Misty blinks at random intervals. 
 
-**Note:**
+Misty blinks while any of her default open-eyed image assets display on her screen, with the exception of `Angry.png`.
 
-Endpoint: POSt &lt;robot-ip-address&gt;/api/blink
+{{box op="start" cssClass="boxed noteBox"}}
+**Note:** If you overwrite an open-eyed image asset with a different image that uses the same filename, then Misty will blink anytime her display shows the new image, even if it does not show Misty's eyes. For this reason, we suggest you not overwrite Misty's default image assets with other image files.
+{{box op="end"}}
+
+Endpoint: POST &lt;robot-ip-address&gt;/api/blink
 
 Parameters
 
-* blink (bool) - Passing a value of `true` turns blinking on, and passing `false` turns blinking off. By default, blinking is turned on at startup.
+* Blink (bool) - Passing in `true` turns blinking on, and passing in `false` turns blinking off. By default, blinking turns on when Misty starts up.
+
+```JSON
+{
+  "Blink": true
+}
+```
 
 ### SetFlashlight
 
