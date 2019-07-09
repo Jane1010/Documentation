@@ -392,7 +392,7 @@ Return Values
 
 **Available for Misty II Only**
 
-Turns Misty's eye blinking behavior on or off. Misty blinks by quickly flashing the `Blink.png` image on her display.
+Turns Misty's eye blinking behavior on or off. Misty blinks by quickly flashing the `BlinkMisty.png` image on her display.
 
 When blinking is turned on, Misty checks the filename of the image currently shown on her display. If this filename matches the filename of one of Misty's default open-eyed image assets, then Misty blinks at random intervals. 
 
