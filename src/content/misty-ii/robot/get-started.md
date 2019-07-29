@@ -38,7 +38,7 @@ Follow these steps to start using the Command Center:
 1. [Open up the Command Center](http://sdk.mistyrobotics.com/command-center) in a browser window.
 2. Enter your robot's IP address in the upper-right hand corner of the page and click the **Connect** button. (You can find your robot's IP address in the Misty App.) Look for a "Connected successfully" message to appear at the bottom of the browser window.
 
-Once you're connected, you can experiment with Misty's functionality by interacting with different elements of the Command Center. Here are a few things to try:
+Once Misty is connected, you can experiment with Misty's functionality by interacting with different elements of the Command Center. Here are a few things to try:
 
 * Use the **Quick Commands** section to change the color of Misty's chest LED, show a different image on her display, and have her play a sound. ![Quick Commands](../../../assets/images/command_center_quick_commands.png)
   * Use the color picker or type in different RGB values and click the **Change LED** button. For example, if you wanted Misty's LED to be purple, use **Red**: `101`; **Green**: `73`; and **Blue**: `157`.
